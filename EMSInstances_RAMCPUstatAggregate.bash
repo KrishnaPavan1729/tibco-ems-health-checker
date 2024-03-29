@@ -35,8 +35,7 @@ total_ram=$(echo "scale=2; ${total_ram} + ${rss_mb}" | bc)
 total_cpu=$(echo "scale=2; ${total_cpu} + ${cpu}" | bc )
 Instances_count=$(pgrep -u ${USERNAME} -f ${SERVICE_NAME} | wc -l)
 done
-echo -e "${TIMESTMP} [ User : ${USERNAME} ] | [ EMS Instances Count : ${Instances_count} ] | [ Total RAM Usage : ${total_ram} MB ] | [ Total CPU Usage : ${total_cpu} %
-]" >> ${EMSRAMCPUUsage}/EMSRAMCPUUsage_${DATE}.log
+echo -e "${TIMESTMP} [ User : ${USERNAME} ] | [ EMS Instances Count : ${Instances_count} ] | [ Total RAM Usage : ${total_ram} MB ] | [ Total CPU Usage : ${total_cpu} % ]" >> ${EMSRAMCPUUsage}/EMSRAMCPUUsage_${DATE}.log
 EMSInstances_stat
 }
 
